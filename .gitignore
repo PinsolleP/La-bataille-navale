@@ -8,6 +8,7 @@
 .idea
 .venv
 uv.lock
+bataille_navale.py
 
 # User-specific stuff
 .idea/**/workspace.xml
