@@ -8,6 +8,7 @@ Programme python POO
 Ce projet a été réalisé afin de mettre en pratique les notions suivantes :
 
 -le développement python orienté objet
+
 -l'utilisation de git et de github
 
 # Règlr du jeu :
@@ -41,6 +42,7 @@ sous marin (submarine) en H5 ;
 torpilleur (torpedo_boat) en E9.
 
 Mécanique de jeu
+
 Le programme af che au départ une grille vide, puis demande à l'inni au joueur les
 coordonnées d'un tir, puis indique si ce tir touche un navire (précisant si le navire est coulé à
 la suite de plusieurs tirs convergents, et si la partie est nie lorsque le dernier navire est
