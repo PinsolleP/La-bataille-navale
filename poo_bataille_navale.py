@@ -17,6 +17,29 @@ class Grid:
             for col in columns}
         return grid
 
+    def grid_display(grid, columns):
+        """
+        Affiche la grille de jeu avec numéros de lignes et colonnes.
+        - "." : case vide non tirée
+        - "O" : tir raté
+        - "X" : tir touché
+        """
+        print("   " + " ".join(columns))
+
+        for line in range(1, 11):
+            row_display = []
+            for col in columns:
+                cell = grid[col][line]
+                if cell["touche"]:
+                    if cell["boats"]:
+                        row_display.append("X")
+                    else:
+                        row_display.append("O")
+                else:
+                    row_display.append(".")
+
+            print(f"{line:2} " + " ".join(row_display))
+
 
 class Game:
     pass
