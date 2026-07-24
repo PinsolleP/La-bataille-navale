@@ -15,9 +15,22 @@ if __name__ == "__main__":
     grid = Grid(columns, lines)
     grid.grid_display()
 
-    submarine = Boat("submarine", [("E", 9), ("F", 9)])
+    submarine = Boat(
+        "submarine",
+        [
+            ("E", 9),
+            ("F", 9)
+        ]
+    )
 
     print(submarine.name)
     print(submarine.get_size())
-    grid.place_boat(submarine)
-    grid.grid_display()
+
+    print(submarine.is_sunk())
+
+    submarine.receive_shot(("E", 9))
+    print(submarine.is_sunk())
+
+    submarine.receive_shot(("F", 9))
+    print(submarine.is_sunk())
+
