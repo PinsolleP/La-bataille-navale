@@ -5,13 +5,13 @@ class Grid:
                     Chaque case contient :
                       - boats : booléen (True si un bateau est présent)
                       - touche : booléen (True si la case a été tirée)
-                      - boat_id : nom du bateau présent (ou None)
+                      - boat :  objet bateau présent sur la case (ou none)
                     """
         self.columns = columns
         self.lines = lines
 
         grid = {
-            col: {line: {"boats": False, "touche": False, "boat_id": None} for line in self.lines}
+            col: {line: {"boats": False, "touche": False, "boat": None} for line in self.lines}
             for col in self.columns}
         self.grid = grid
 
@@ -42,8 +42,5 @@ class Grid:
 
         for col, line in boat.coordinates:
             self.grid[col][line]["boats"] = True
-            self.grid[col][line]["boat_id"] = boat.name
-
-
-
+            self.grid[col][line]["boat"] = boat
 
