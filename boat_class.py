@@ -1,2 +1,27 @@
 class Boat:
-    pass
+    """Représente un bateau de la flotte."""
+
+    def __init__(self, name, coordinates):
+        self.name = name
+        self.coordinates = coordinates
+
+    def get_size(self):
+        return len(self.coordinates)
+
+
+
+    #def check_sink(self, boat_name, grid):
+        """
+        Vérifie si toutes les cases d'un bateau sont touchées.
+        :param grid: Grille de jeu.
+        :param boat_name: Nom du bateau.
+        :return: True si le bateau est coulé, False sinon.
+        """
+        for col in self.coordinates:
+            for line in self.coordinates:
+                cell = self.coordinates[col][line]
+                if cell["boats"] and cell["boat_id"] == boat_name and not cell["touche"]:
+                    return False
+        return True
+
+
