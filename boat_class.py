@@ -16,6 +16,10 @@ class Boat:
             return True
         return False
 
+    def is_sunk(self):
+        return len(self.hits) == len(self.coordinates)
+
+
 
 
 
